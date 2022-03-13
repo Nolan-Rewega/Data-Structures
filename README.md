@@ -35,17 +35,16 @@ My implementation collection of common datastructures in C++. :)
 * Priority Search Trees <br />
 
 * Quad Trees <br />
-* OctTrees <br />
+* Oct Trees <br />
 * BSP-tree <br />
 
 
 # Graphs
 
-* Simple Graph <br />
-* Weighted Siple graphs <br />
-* Non-Simple Graphs <br />
+* Undirected Graphs <br />
+* Undirected Weighted Graphs <br />
 * Directed Graph <br />
-* Weighted Directed Graph <br />
+* Directed Weighted Graph <br />
 
 
 # Queues
