@@ -12,14 +12,19 @@ private:
 
 public:
 	Node(int value);
+	
+	/* BST methods */
+	bool insert(Node* given);
+	void remove(Node* given);
+	Node* search();
+	void BFSprint(int height);
+
+	/* Node methods */
 	int getItem();
 	Node* getLeft();
 	Node* getRight();
-	void setLeft(Node* node);
-	void setRight(Node* node);
-	
-	bool compareGeq(int value);
-    
+	void setLeft(Node* given);
+	void setRight(Node* given);
 
 };
 

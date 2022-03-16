@@ -12,12 +12,15 @@ private:
 
 
 public:
-	void insert();
-	void remove();
-	Node* search();
+	BST();	
+
+	void insert(int value);
+	void remove(int value);
+	Node* search(int value);
 	Node* getRoot();
 	void setRoot(Node* given);
-
+	
+	void info();
 };
 
 
