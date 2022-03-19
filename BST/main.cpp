@@ -18,8 +18,12 @@ int main(){
 	assert(bst->search(10) != nullptr /* didn't find anything */);
 	assert(bst->search(9000) == nullptr /* found something that does not exist*/);
 	assert(bst->search(2) != nullptr /* didn't find anything */);
-
-
+	
+	bst->remove(150);
+	bst->remove(9000);
+	bst->info();
+	bst->remove(10);
+	bst->info();
 
 
 }

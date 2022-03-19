@@ -7,6 +7,7 @@ using namespace std;
 class Node{
 private:
 	int item;
+	Node* parent;
 	Node* left;
 	Node* right;
 
@@ -25,7 +26,8 @@ public:
 	Node* getRight();
 	void setLeft(Node* given);
 	void setRight(Node* given);
-
+	Node* getParent();
+	void setParent(Node* given);
 };
 
 #endif

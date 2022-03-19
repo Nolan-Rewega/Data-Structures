@@ -14,14 +14,39 @@ void BST::insert(int value){
 	if(root->insert(node)){size++;}	
 }
 
+
+
 void BST::remove(int value){
-	if(size != 0 ){root->remove(value);}
+	if(size != 0){
+		// -- if removing root, we have to handle it in BST.cpp
+		if(root->getItem() == value){
+			if(root->getRight() == nullptr && root->getLeft() == nullptr){root = nullptr;}
+			else if(root->getRight() != nullptr && root->getLeft() != nullptr){
+				root->getRight()->insert(root->getLeft());
+				setRoot(root->getRight());
+			}
+			else if(root->getRight() != nullptr){ setRoot(root->getRight());}
+			else{setRoot(root->getLeft());}
+		}
+		else{root->remove(value);}
+	}
 }
+
+
 
 Node* BST::search(int value){
 	if(size == 0){return nullptr;}
 	return root->search(value);
 }
+
+
+
+void BST::setRoot(Node* given){
+	root = given;
+	root->setParent(nullptr);
+}
+
+
 
 void BST::info(){
 	// -- BFS traversal

@@ -2,6 +2,7 @@
 
 Node::Node(int value){
 	item = value;
+	parent = nullptr;
 	left = nullptr;
 	right = nullptr;
 }
@@ -12,16 +13,52 @@ bool Node::insert(Node* given){
 	// -- insert/search right
 	if(given->getItem() >= item){
 		if(right != nullptr){return right->insert(given);}
-		else{ right = given; return true;}
+		else{
+			right = given;
+			given->setParent(this);
+			return true;
+		}
 	}
 	// -- insert/search left
 	else{
 		if(left != nullptr){return left->insert(given);}
-    	else{ left = given; return true;}
+    	else{
+			left = given;
+			given->setParent(this);
+			return true;
+		}
 	}
 }
 
-void Node::remove(int value){}
+
+void Node::remove(int value){
+	if(value == item){
+		/* ugly duplicate code.*/
+		if(item >= parent->getItem()){
+			if(right == nullptr && left == nullptr){parent->setRight(nullptr);}
+			else if(right != nullptr && left != nullptr){
+				parent->setRight(right);
+				right->insert(left);
+			}
+			else if(right != nullptr){parent->setRight(right);}
+			else{parent->setRight(left);}
+		}
+		else{
+			if(right == nullptr && left == nullptr){parent->setLeft(nullptr);}
+			else if(right != nullptr && left != nullptr){
+				parent->setLeft(left);
+				left->insert(right);
+			}
+			else if(right != nullptr){parent->setLeft(right);}
+			else{parent->setLeft(left);}
+		}
+	}
+	else if( value > item && right != nullptr){right->remove(value);}
+	else if( value < item && left != nullptr){left->remove(value);}
+
+}
+
+
 
 Node* Node::search(int value){
 	if(item == value){return this;}
@@ -53,6 +90,8 @@ void Node::BFSprint(){
 int Node::getItem(){ return item;}
 Node* Node::getRight(){ return right;}
 Node* Node::getLeft(){ return left;}
+Node* Node::getParent(){return parent;}
 void Node::setRight(Node* given){ right = given ;}
 void Node::setLeft(Node* given){ left = given;}
+void Node::setParent(Node* given){ parent = given;}
 

@@ -10,6 +10,7 @@ private:
 	int size;
 	Node* root;
 
+	void setRoot(Node* given);
 
 public:
 	BST();	
@@ -18,7 +19,6 @@ public:
 	void remove(int value);
 	Node* search(int value);
 	Node* getRoot();
-	void setRoot(Node* given);
 	
 	void info();
 };
