@@ -21,16 +21,29 @@ bool Node::insert(Node* given){
 	}
 }
 
+void Node::remove(int value){}
 
-void Node::BFSprint(int height){
-	for(int i = 0; i < height; i++){
-		if(i < height * 2 || i > height * 2){cout << "\t";}
-		else{cout << item;}
-	}
-	cout << "\n";
+Node* Node::search(int value){
+	if(item == value){return this;}
+
+	Node* leftResult = nullptr;
+	Node* rightResult = nullptr;
+
+	if(left != nullptr){leftResult = left->search(value);}
+	if(right != nullptr){rightResult = right->search(value);}
 	
-	if(left != nullptr){left->BFSprint(height - 1);}
-	if(left != nullptr){left->BFSprint(height - 1);}
+	if(leftResult != nullptr){return leftResult;}
+	if(rightResult != nullptr){return rightResult;}
+	return nullptr;
+}
+
+
+
+void Node::BFSprint(){
+	cout << item << "\t";
+	
+	if(left != nullptr){left->BFSprint();}
+	if(right != nullptr){right->BFSprint();}
 
 }
 

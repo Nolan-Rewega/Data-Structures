@@ -14,6 +14,10 @@ int main(){
 	bst->insert(150);
 	bst->insert(2);
 	bst->info();
+	
+	assert(bst->search(10) != nullptr /* didn't find anything */);
+	assert(bst->search(9000) == nullptr /* found something that does not exist*/);
+	assert(bst->search(2) != nullptr /* didn't find anything */);
 
 
 

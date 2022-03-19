@@ -6,7 +6,7 @@ BST::BST(){
 }
 
 
-BST::insert(int value){
+void BST::insert(int value){
 	Node* node = new Node(value);
 	if(size == 0){root = node; size++; return;}
 	
@@ -14,8 +14,17 @@ BST::insert(int value){
 	if(root->insert(node)){size++;}	
 }
 
+void BST::remove(int value){
+	if(size != 0 ){root->remove(value);}
+}
 
-BST::info(){
+Node* BST::search(int value){
+	if(size == 0){return nullptr;}
+	return root->search(value);
+}
+
+void BST::info(){
 	// -- BFS traversal
-
+	if(root != nullptr){root->BFSprint();}
+	cout << "\n";
 }

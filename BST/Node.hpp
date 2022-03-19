@@ -15,9 +15,9 @@ public:
 	
 	/* BST methods */
 	bool insert(Node* given);
-	void remove(Node* given);
-	Node* search();
-	void BFSprint(int height);
+	void remove(int given);
+	Node* search(int value);
+	void BFSprint();
 
 	/* Node methods */
 	int getItem();
