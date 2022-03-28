@@ -21,6 +21,7 @@ My implementation collection of common datastructures in C++. :)
 # Trees
 
 * Simple Tree <br />
+* Binary tree <br />
 * Balanced Binary Tree <br />
 * Finger Trees 		(Functional ds) <br />
 * AVL-Tree <br />
