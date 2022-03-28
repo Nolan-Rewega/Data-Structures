@@ -1,6 +1,6 @@
 # Data-Structures Implementations.
 
-My implementation collection of common datastructures in C++. :)
+My implementation of common datastructures in C++. :)
 
 # Lists
 
