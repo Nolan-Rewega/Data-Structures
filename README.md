@@ -14,7 +14,7 @@ My implementation of common data structures in C++. :)
 
 # Heaps
 
-* Heaps <br />
+* Heaps ✅ <br />
 * Treap <br />
 * Fibonacci Heap <br />
 
