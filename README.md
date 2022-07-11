@@ -22,10 +22,9 @@ My implementation of common data structures in C++. :)
 
 * Simple Tree <br />
 * Binary tree   ✅ <br />
-* Balanced Binary Tree <br />
-* Finger Trees 		(Functional ds) <br />
 * AVL-Tree <br />
 * Red-Black Tree <br />
+* Finger Trees 		(Functional ds) <br />
 * B Tree <br />
 * B+ Tree <br />
 
