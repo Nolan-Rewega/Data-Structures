@@ -48,10 +48,6 @@ My implementation of common data structures in C++. :)
 * Directed Weighted Graph <br />
 
 
-# Queues
-
-* Priority Queues <br />
-
 # Maybes 
 DCEL <br />
 
